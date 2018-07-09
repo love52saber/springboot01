@@ -1,6 +1,6 @@
-package main.java.com.dao;
+package com.dao;
 
-import main.java.com.model.Customer;
+import com.model.Customer;
 
 public interface CustomerMapper {
     int deleteByPrimaryKey(Long custId);

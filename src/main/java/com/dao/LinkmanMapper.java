@@ -1,6 +1,6 @@
-package main.java.com.dao;
+package com.dao;
 
-import main.java.com.model.Linkman;
+import com.model.Linkman;
 
 public interface LinkmanMapper {
     int deleteByPrimaryKey(Long lkmId);

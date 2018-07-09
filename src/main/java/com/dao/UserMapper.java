@@ -1,6 +1,6 @@
-package main.java.com.dao;
+package com.dao;
 
-import main.java.com.model.User;
+import com.model.User;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Long userId);

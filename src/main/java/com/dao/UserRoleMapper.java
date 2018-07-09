@@ -1,6 +1,6 @@
-package main.java.com.dao;
+package com.dao;
 
-import main.java.com.model.UserRoleKey;
+import com.model.UserRoleKey;
 
 public interface UserRoleMapper {
     int deleteByPrimaryKey(UserRoleKey key);

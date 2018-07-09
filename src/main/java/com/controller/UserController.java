@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.model.User;
 import com.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ public class UserController {
 
     @RequestMapping("/getUser")
     public @ResponseBody
-    main.java.com.model.User getUser() {
+    User getUser() {
        return userService.selectByPrimaryKey(5L);
     }
 }

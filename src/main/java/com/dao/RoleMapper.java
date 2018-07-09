@@ -1,6 +1,6 @@
-package main.java.com.dao;
+package com.dao;
 
-import main.java.com.model.Role;
+import com.model.Role;
 
 public interface RoleMapper {
     int deleteByPrimaryKey(Long roleId);

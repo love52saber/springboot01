@@ -1,15 +1,18 @@
 package com.service.Impl;
 
+import com.dao.UserMapper;
+import com.model.User;
+import com.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
 
     @Autowired
-    private main.java.com.dao.UserMapper UserMapper;
+    private UserMapper userMapper;
 
-    public main.java.com.model.User selectByPrimaryKey(Long userId) {
-        return UserMapper.selectByPrimaryKey(userId);
+    public User selectByPrimaryKey(Long userId) {
+        return userMapper.selectByPrimaryKey(userId);
     }
 }
