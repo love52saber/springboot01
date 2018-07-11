@@ -14,7 +14,7 @@
         <result column="cust_mobile" property="custMobile" jdbcType="VARCHAR"/>
     </resultMap>
     <sql id="Base_Column_List">
-    cust_id, cust_name, cust_user_id, cust_create_id, cust_source, cust_industry, cust_level, 
+    cust_id, cust_name, cust_user_id, cust_create_id, cust_source, cust_industry, cust_level,
     cust_linkman, cust_phone, cust_mobile
   </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
@@ -38,13 +38,13 @@
     where cust_id = #{custId,jdbcType=BIGINT}
   </delete>
     <insert id="insert" parameterType="com.model.Customer">
-    insert into cst_customer (cust_id, cust_name, cust_user_id, 
-      cust_create_id, cust_source, cust_industry, 
-      cust_level, cust_linkman, cust_phone, 
+    insert into cst_customer (cust_id, cust_name, cust_user_id,
+      cust_create_id, cust_source, cust_industry,
+      cust_level, cust_linkman, cust_phone,
       cust_mobile)
-    values (#{custId,jdbcType=BIGINT}, #{custName,jdbcType=VARCHAR}, #{custUserId,jdbcType=BIGINT}, 
-      #{custCreateId,jdbcType=BIGINT}, #{custSource,jdbcType=VARCHAR}, #{custIndustry,jdbcType=VARCHAR}, 
-      #{custLevel,jdbcType=VARCHAR}, #{custLinkman,jdbcType=VARCHAR}, #{custPhone,jdbcType=VARCHAR}, 
+    values (#{custId,jdbcType=BIGINT}, #{custName,jdbcType=VARCHAR}, #{custUserId,jdbcType=BIGINT},
+      #{custCreateId,jdbcType=BIGINT}, #{custSource,jdbcType=VARCHAR}, #{custIndustry,jdbcType=VARCHAR},
+      #{custLevel,jdbcType=VARCHAR}, #{custLinkman,jdbcType=VARCHAR}, #{custPhone,jdbcType=VARCHAR},
       #{custMobile,jdbcType=VARCHAR})
   </insert>
     <insert id="insertSelective" parameterType="com.model.Customer">
