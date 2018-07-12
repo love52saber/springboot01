@@ -1,13 +1,6 @@
-package com.model;
+package com.query;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
-@ApiModel(value = "user对象1",description = "用户对象")
-public class Customer extends BaseModel {
-
-    @ApiModelProperty(value = "主键",name = "主键",example = "4L")
-    private Long custId;
+public class CustomerQuery extends BaseQuery {
 
     private String custName;
 
@@ -27,20 +20,12 @@ public class Customer extends BaseModel {
 
     private String custMobile;
 
-    public Long getCustId() {
-        return custId;
-    }
-
-    public void setCustId(Long custId) {
-        this.custId = custId;
-    }
-
     public String getCustName() {
         return custName;
     }
 
     public void setCustName(String custName) {
-        this.custName = custName == null ? null : custName.trim();
+        this.custName = custName;
     }
 
     public Long getCustUserId() {
@@ -64,7 +49,7 @@ public class Customer extends BaseModel {
     }
 
     public void setCustSource(String custSource) {
-        this.custSource = custSource == null ? null : custSource.trim();
+        this.custSource = custSource;
     }
 
     public String getCustIndustry() {
@@ -72,7 +57,7 @@ public class Customer extends BaseModel {
     }
 
     public void setCustIndustry(String custIndustry) {
-        this.custIndustry = custIndustry == null ? null : custIndustry.trim();
+        this.custIndustry = custIndustry;
     }
 
     public String getCustLevel() {
@@ -80,7 +65,7 @@ public class Customer extends BaseModel {
     }
 
     public void setCustLevel(String custLevel) {
-        this.custLevel = custLevel == null ? null : custLevel.trim();
+        this.custLevel = custLevel;
     }
 
     public String getCustLinkman() {
@@ -88,7 +73,7 @@ public class Customer extends BaseModel {
     }
 
     public void setCustLinkman(String custLinkman) {
-        this.custLinkman = custLinkman == null ? null : custLinkman.trim();
+        this.custLinkman = custLinkman;
     }
 
     public String getCustPhone() {
@@ -96,7 +81,7 @@ public class Customer extends BaseModel {
     }
 
     public void setCustPhone(String custPhone) {
-        this.custPhone = custPhone == null ? null : custPhone.trim();
+        this.custPhone = custPhone;
     }
 
     public String getCustMobile() {
@@ -104,6 +89,6 @@ public class Customer extends BaseModel {
     }
 
     public void setCustMobile(String custMobile) {
-        this.custMobile = custMobile == null ? null : custMobile.trim();
+        this.custMobile = custMobile;
     }
 }

@@ -23,15 +23,11 @@
         from cst_customer
         where cust_id = #{custId,jdbcType=BIGINT}
     </select>
-    <select id="selectByMap" resultMap="BaseResultMap" parameterType="hashmap">
+    <select id="selectByCustomer" resultMap="BaseResultMap" parameterType="customer">
         select
         <include refid="Base_Column_List"/>
         from cst_customer
-        <where>
-            <if test="custName!=null and custName != ''">
-                and cust_name like "%"#{custName}"%"
-            </if>
-        </where>
+        <include refid="Base_Where"/>
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from cst_customer
@@ -160,4 +156,22 @@
       cust_mobile = #{custMobile,jdbcType=VARCHAR}
     where cust_id = #{custId,jdbcType=BIGINT}
   </update>
+
+    <!--自定义sql-->
+    <select id="selectCount" parameterType="customer" resultType="int">
+        select count(*)
+        from cst_customer
+        <include refid="Base_Where"/>
+        <if test="orderBy!=null and orderBy!=''">
+            order by  #{orderby}
+        </if>
+    </select>
+
+    <sql id="Base_Where">
+        <where>
+            <if test="custName!=null and custName != ''">
+                and cust_name like "%"#{custName}"%"
+            </if>
+        </where>
+    </sql>
 </mapper>

@@ -1,12 +1,10 @@
 package com.service;
 
 import com.model.Customer;
-
-import java.util.HashMap;
-import java.util.List;
+import com.model.PageBean;
 
 public interface CustomerService {
     void save(Customer customer);
 
-    List<Customer> list(HashMap<String, Object> paramMap);
+    PageBean<Customer> list(Customer customer);
 }

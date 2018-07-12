@@ -3,7 +3,6 @@ package com.dao;
 import com.model.Customer;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
 import java.util.List;
 
 @Repository
@@ -20,5 +19,7 @@ public interface CustomerMapper {
 
     int updateByPrimaryKey(Customer record);
 
-    List<Customer> selectByMap(HashMap<String,Object> paramMap);
+    List<Customer> selectByCustomer(Customer customer);
+
+    int selectCount(Customer customer);
 }

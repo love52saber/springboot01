@@ -116,6 +116,13 @@
                                    style="WIDTH: 180px" maxLength=50 name="custWebsite">
                         </td>
                     </TR>
+                    <TR>
+                        <td colspan="">文件上传</td>
+                        <td>
+                            <form enctype="multipart/form-data" action=""
+                           <input type="file">
+                        </td>
+                    </TR>
                     <tr>
                         <td rowspan=2>
                             <INPUT class=button id=sButton2 type=submit
